@@ -1,0 +1,18 @@
+.hero {
+    background: rgb(255,254,254);
+background: linear-gradient(211deg, #fffefe 19%, #1ddd549f 99%);   
+background-size: cover; /* Izstiepj fona attēlu pēc elementa izmēra */
+background-position: center; /* Centrē fona attēlu */
+background-repeat: no-repeat; /* Novērš fona atkārtošanos */
+align-items: center; /* Vertikālā centrēšana */
+//color: white; /* Teksta krāsa ir balta */
+
+}
+
+
+
+.hero h2 {
+    font-size: 40px;
+    color: #333;
+            text-align: left;
+}

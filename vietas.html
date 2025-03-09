@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vilhelms Purvītis - Digitālā Izstāde</title>
+    <link rel="stylesheet" href="kk.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="styles.scss">
+
+    <script defer src="main.js"></script> 
+    <style>
+        .image-with-text {
+            text-align: center; 
+            margin: 20px 0; 
+        }
+
+        .image-with-text img {
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px #00000033; 
+        }
+
+        .image-with-text p {
+            margin-top: 10px; 
+            font-size: 1.2rem; 
+            color: #333; 
+        }
+      
+        .image-descriptions {
+            text-align: center;
+            margin-top: 20px;
+        }
+    
+        .image-descriptions p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+/**/
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.read-more {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1DDF54;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.read-more:hover {
+    background-color: #0d6a2b;
+}
+
+/**/
+
+.fact-item:nth-child(odd) {
+    background-color: #fefefe;
+}
+.fact-item:nth-child(even) {
+    background-color: #1DDF54;
+}
+
+p {
+    text-indent: 30px; 
+  }
+
+</style>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vilhelms Purvītis - Digitālā Izstāde</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Sākums</a>
+        <a href="bio.html">Biogrāfija</a>
+        <a href="fakti.html">Fakti</a>
+        <a href="vietas.html">Vietas</a>
+        <a href="Galerija.html">Galerija</a>
+        <a href="digital.html">Digital</a>
+        <a href="Izstādes.html">Izstādes</a>
+        <a href="Atsauksmes.html">Atsauksmes</a>
+        <a href="Kontakti.html">Kontakti</a>
+        <a href="Literatūra.html">Literatūra</a>
+    </nav>
+    <main>
+        <div class="hero">
+            <h2>Vilhelma Purvīša muzejs</h2>
+        </div>
+
+            <p>Vilhelma Purvīša muzejs ir unikāla kultūras institūcija, kas veltīta viena no Latvijas izcilākajiem māksliniekiem - Vilhelmam Purvītim.</p> 
+            <p> Muzeja mērķis ir saglabāt un popularizēt viņa daiļradi, vienlaikus iedvesmojot sabiedrību caur mākslas, dabas un kultūras mijiedarbību.</p>
+        
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="vietas1.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="vietas2.jpeg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="vietas3.jpeg" style="width:100%">
+              </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+           
+        <div class="image-descriptions">
+
+           <div class="image-descriptions">
+  
+    <p><strong>Muzeja misija:</strong> Godināt Vilhelma Purvīša personību un radošo mantojumu, pārveidojot viņa dzimto vietu "Vecjauži" par starptautisku jaunrades centru un veidojot Rīgā viņa darbu galeriju, kas balstīta uz padziļinātiem pētījumiem.
+    </p>
+    <p>
+        <strong>Muzeja vērtības:</strong>  
+        <ul>
+            <p><strong>DAILE</strong>: harmonija, ainava, rezultāts.</p>
+            <p><strong>NATŪRA</strong>: ekoloģiskā ilgtspēja, cilvēks dabā.</p>
+            <p><strong>DARBS</strong>: process, pilnība, radošums.</p>
+        </ul>
+    </p>
+    <p>
+        Muzejs ir atvērts visu diennakti, piedāvājot apmeklētājiem iespēju iepazīt Purvīša mākslas pasauli jebkurā laikā. Ieeja ir bez maksas, lai ikvienam būtu iespēja piedzīvot šo unikālo pieredzi.
+    </p>
+    <p> <strong>Adrese:</strong> Vecjauži, Taurupes pagasts, Ogres novads, Latvija.
+    </p>
+    
+      <p><strong>Plašāka informācija ir atrodama šajā mājaslapā:</strong>
+      <button class="read-more" onclick="window.open('https://purvitis.lv/muzejs/', '_blank')">Uzzināt vairāk</button></p>
+  
+</div>
+
+        </div>
+    </main>
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel-images img');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+    
+        let currentIndex = 0;
+    
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carouselImages.style.transform = `translateX(${offset}%)`;
+        }
+    
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateCarousel();
+        });
+    
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateCarousel();
+        });
+    </script>
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Saites</h4>
+                <div class="list-container">
+                    <div class="footer-links-column">
+                        <ul>
+                            <li><a href="index.html">Sākums</a></li>
+                            <li><a href="bio.html">Biogrāfija</a></li>
+                            <li><a href="fakti.html">Fakti</a></li>
+                            <li><a href="vietas.html">Vietas</a></li>
+                            <li><a href="Galerija.html">Galerija</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <ul>
+                            <li><a href="digital.html">Digital</a></li>
+                            <li><a href="Izstādes.html">Izstādes</a></li>
+                            <li><a href="Atsauksmes.html">Atsauksmes</a></li>
+                            <li><a href="Kontakti.html">Kontakti</a></li>
+                            <li><a href="Literatūra.html">Literatūra</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-column">
+                <h4>Sazinieties ar mums</h4>
+                <ul>
+                    <li><a href="mailto:info@purvitis.lv">info@purvitis.lv</a></li>
+                    <li>+371 123 456 78</li>
+                    <li>
+                        <a href="#" aria-label="Facebook"><img src="facebook.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+                        <a href="#" aria-label="Twitter"><img src="twitter.png" alt="Twitter"></a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h4>Citi resursi</h4>
+                <ul>
+                    <li><a href="#">Privātuma politika</a></li>
+                    <li><a href="#">Sīkdatņu politika</a></li>
+                    <li><a href="#">Lietošanas noteikumi</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Vilhelms Purvītis - Digitālā Izstāde - Ksenija Koršunova</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
