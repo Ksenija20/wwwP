@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vilhelms Purvītis - Digitālā Izstāde</title>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="kk.css">
+    <link rel="stylesheet" href="styles.scss">
+    <script defer src="kont.js"></script> 
+    <script defer src="main.js"></script> 
+    
+ <style>
+/* Navigācijas un citu elementu stili */
+nav a:hover::after {
+    width: 100%; 
+}
+
+nav a.active::after {
+    width: 100%; 
+}
+
+nav a.active {
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:  4px 8px #0000001a;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 4px 8px #0000001a;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fdfdfd;
+    margin-top: 20px;
+}
+
+#message-history {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#message-history li {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#message-history li span {
+    font-weight: bold;
+    display: block;
+}
+
+button.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Pogas augšējais ievilkums */
+}
+
+
+
+/* Formas stili */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+</style>
+
+<script>
+   
+
+    // Piemērs funkcijai, lai pievienotu jaunu komentāru
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <span><strong>${name}</strong> (${email}):</span>
+            <p>${message}</p>
+            <button class="delete-btn" onclick="deleteComment(this)">Dzēst</button>
+        `;
+        document.getElementById('message-history').appendChild(li);
+
+        // Notīrām formu
+       // document.getElementById('contact-form').reset();
+    });
+</script>
+
+</head>
+<body>
+    <header>
+        <h1>Vilhelms Purvītis - Digitālā Izstāde</h1>
+    </header>
+    <nav>
+        <a href="index.html">Sākums</a>
+        <a href="bio.html">Biogrāfija</a>
+        <a href="fakti.html">Fakti</a>
+        <a href="vietas.html">Vietas</a>
+        <a href="Galerija.html">Galerija</a>
+        <a href="digital.html">Digital</a>
+        <a href="Izstādes.html">Izstādes</a>
+        <a href="Atsauksmes.html">Atsauksmes</a>
+        <a href="Kontakti.html">Kontakti</a>
+        <a href="Literatūra.html">Literatūra</a>
+    </nav>
+    <main>
+        <div class="hero">
+            <h2>Atsauksmes</h2>
+        </div>
+
+        <h3>Ja jums patīk mūsu galerija, droši varat atstāt savus komentārus.</h3>
+        <form id="contact-form">
+            <label for="name">Vārds:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-pasts:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Atstājiet atsauksmi:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Nosūtīt</button>
+        </form>
+        <p id="form-message"></p>
+        <h3>Iesūtītās ziņas:</h3>
+        <ul id="message-history"></ul>
+
+        
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Saites</h4>
+                <div class="list-container">
+                    <div class="footer-links-column">
+                        <ul>
+                            <li><a href="index.html">Sākums</a></li>
+                            <li><a href="bio.html">Biogrāfija</a></li>
+                            <li><a href="fakti.html">Fakti</a></li>
+                            <li><a href="vietas.html">Vietas</a></li>
+                            <li><a href="Galerija.html">Galerija</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <ul>
+                            <li><a href="digital.html">Digital</a></li>
+                            <li><a href="Izstādes.html">Izstādes</a></li>
+                            <li><a href="Atsauksmes.html">Atsauksmes</a></li>
+                            <li><a href="Kontakti.html">Kontakti</a></li>
+                            <li><a href="Literatūra.html">Literatūra</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-column">
+                <h4>Sazinieties ar mums</h4>
+                <ul>
+                    <li><a href="mailto:info@purvitis.lv">info@purvitis.lv</a></li>
+                    <li>+371 123 456 78</li>
+                    <li>
+                        <a href="#" aria-label="Facebook"><img src="facebook.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+                        <a href="#" aria-label="Twitter"><img src="twitter.png" alt="Twitter"></a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h4>Citi resursi</h4>
+                <ul>
+                    <li><a href="#">Privātuma politika</a></li>
+                    <li><a href="#">Sīkdatņu politika</a></li>
+                    <li><a href="#">Lietošanas noteikumi</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Vilhelms Purvītis - Digitālā Izstāde - Ksenija Koršunova</p>
+        </div>
+    </footer>
+</body>
+</html>
